@@ -1,0 +1,19 @@
+{
+  "name": "magwai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FantasticFox91/magwai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FantasticFox91/magwai/issues"
+  },
+  "homepage": "https://github.com/FantasticFox91/magwai#readme"
+}
