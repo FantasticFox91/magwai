@@ -547,6 +547,7 @@ html {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  /* stylelint-disable-next-line */
   min-height: 100dvh;
 }
 
@@ -605,6 +606,7 @@ html {
   position: relative;
   padding: 20px 0;
   color: #ffffff;
+  background-color: #131313;
 }
 
 .header--open .header__nav {
@@ -626,7 +628,7 @@ html {
   transform: translateY(-100%);
   transition: all 0.3s ease;
   background-color: #131313;
-  z-index: 3;
+  z-index: -1;
 }
 
 .header__list {
@@ -706,7 +708,7 @@ html {
   color: #ffffff;
 }
 
-.button:disabled:active:before {
+.button:disabled:active::before {
   background-color: #ffffff;
 }
 
@@ -1181,7 +1183,7 @@ html {
     color: #ffffff;
   }
 
-  .button:disabled:hover:not(.focus-visible):before {
+  .button:disabled:hover:not(.focus-visible)::before {
     background-color: #ffffff;
   }
 

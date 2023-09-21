@@ -26,29 +26,29 @@ export default class LoadMore {
   }
 
   #requestNewCards() {
+    this.#disableButton();
     try {
-      this.#disableButton();
       fetch(`${this.#baseUrl}?_page=${this.#page}&_limit=${this.#limit}`)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`Network response was not ok: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((cards) => {
-            this.#page++;
-            this.#addCards(cards);
-            this.#cardsOnPage += cards.length;
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((cards) => {
+          this.#page++;
+          this.#addCards(cards);
+          this.#cardsOnPage += cards.length;
 
-            if (this.#cardsOnPage >= this.#cardsLimit) {
-              this.#removeButton();
-            }
-            this.#enableButton();
-          });
+          if (this.#cardsOnPage >= this.#cardsLimit) {
+            this.#removeButton();
+          }
+
+          this.#enableButton();
+        });
     } catch (error) {
-      console.error('An error occurred:', error);
-    } finally {
       this.#enableButton();
+      console.error('An error occurred:', error);
     }
   }
 
