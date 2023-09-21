@@ -97,3 +97,15 @@
     pointer-events: auto;
   }
 }
+
+.modal__close-btn {
+  .modal__icon {
+    transition: transform $trans-default;
+  }
+
+  @include hover {
+    .modal__icon {
+      transform: scale(1.2);
+    }
+  }
+}
