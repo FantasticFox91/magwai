@@ -28,7 +28,7 @@
       background-color: $color-gray;
       color: $color-default-white;
 
-      &:before {
+      &::before {
         background-color: $color-default-white;
       }
     }
@@ -37,7 +37,7 @@
       background-color: $color-gray;
       color: $color-default-white;
 
-      &:before {
+      &::before {
         background-color: $color-default-white;
       }
     }

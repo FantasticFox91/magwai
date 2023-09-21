@@ -10,7 +10,7 @@ export default class LoadMore {
 
   constructor(buttonElement, listElement, cardsPerPage = 10, cardsLimit) {
     this.#buttonElement = buttonElement;
-    this.#buttonTextElement = this.#buttonElement.querySelector('.button__text')
+    this.#buttonTextElement = this.#buttonElement.querySelector('.button__text');
     this.#listElement = listElement;
     this.#limit = cardsPerPage;
     this.#cardsOnPage = this.#listElement.querySelectorAll('.card').length;
@@ -22,31 +22,31 @@ export default class LoadMore {
   }
 
   #setInnerHandlers() {
-    this.#buttonElement.addEventListener('click', () => this.#requestNewCards())
+    this.#buttonElement.addEventListener('click', () => this.#requestNewCards());
   }
 
   #requestNewCards() {
     try {
       this.#disableButton();
       fetch(`${this.#baseUrl}?_page=${this.#page}&_limit=${this.#limit}`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Network response was not ok: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((cards) => {
-          this.#page++;
-          this.#addCards(cards);
-          this.#cardsOnPage += cards.length;
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((cards) => {
+            this.#page++;
+            this.#addCards(cards);
+            this.#cardsOnPage += cards.length;
 
-          if (this.#cardsOnPage >= this.#cardsLimit) {
-            this.#removeButton();
-          }
-          this.#enableButton();
-        });
+            if (this.#cardsOnPage >= this.#cardsLimit) {
+              this.#removeButton();
+            }
+            this.#enableButton();
+          });
     } catch (error) {
-      console.error("An error occurred:", error);
+      console.error('An error occurred:', error);
     } finally {
       this.#enableButton();
     }
@@ -63,7 +63,7 @@ export default class LoadMore {
   }
 
   #createCardTemplate(data) {
-    return(`
+    return (`
       <li class="cards__item">
         <div class="card">
           <picture>
@@ -81,7 +81,7 @@ export default class LoadMore {
           </div>
         </div>
       </li>
-    `)
+    `);
   }
 
   #createCardsTemplate(cards) {

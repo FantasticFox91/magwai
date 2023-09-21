@@ -23,10 +23,10 @@ export default class Form {
       if (this.#validateForm()) {
         const data = new FormData(this.#formElement);
         console.log('succes', data);
-        return
+        return;
       }
-      console.log('error during validation')
-    })
+      console.log('error during validation');
+    });
   }
 
   #validateForm() {
@@ -42,9 +42,9 @@ export default class Form {
       element.classList.add('form__input--error');
       setTimeout(() => {
         element.classList.remove('form__input--error');
-      }, 2000)
+      }, 2000);
     }
-    return isValid
+    return isValid;
   }
 
   #validateAgree() {
@@ -53,8 +53,8 @@ export default class Form {
       this.#agreeInput.classList.add('form__input--error');
       setTimeout(() => {
         this.#agreeInput.classList.remove('form__input--error');
-      }, 2000)
+      }, 2000);
     }
-    return isValid
+    return isValid;
   }
 }

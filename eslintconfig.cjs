@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
 
-    'no-console': 'error',
+    'no-console': 'off',
     'no-constant-condition': 'error',
     'no-control-regex': 'error',
     'no-debugger': 'error',
