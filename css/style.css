@@ -606,6 +606,7 @@ html {
   position: relative;
   padding: 20px 0;
   color: #ffffff;
+  background-color: #131313;
 }
 
 .header--open .header__nav {
@@ -627,7 +628,7 @@ html {
   transform: translateY(-100%);
   transition: all 0.3s ease;
   background-color: #131313;
-  z-index: 3;
+  z-index: -1;
 }
 
 .header__list {
