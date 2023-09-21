@@ -8,17 +8,17 @@ $ npm install
 $ npm start
 
 # build for production
-$ npm build
+$ npm run build
 
 # deploy using gh-pages
-$ npm deploy
+$ npm run deploy
 
 # Run linting tests for styles and scripts
 $ npm test
 
 # Create webp for images
-$ npm webp
+$ npm run webp
 
 # Optimize images
-$ npm imagemin
+$ npm run imagemin
 ```
