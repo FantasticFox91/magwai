@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-default-white;
+  color: $color-default-black;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__description {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px 25px 30px;
+}
+
+.card__heading {
+  margin: 0;
+  font-family: $ff-secondary;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.card__subheading {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.card__info {
+  margin: 0;
+  color: $color-dim-gray-dark;
+}
+
+.card__bottom {
+  margin: 0;
+  color: $color-dim-gray-dark;
+}
+
+.card__author {
+  font-weight: 700;
+}
+
+.card__link-button {
+  display: flex;
+  margin-top: auto;
+  padding: 14px;
+  justify-content: center;
+  background-color: $color-default-black;
+  border: 1px solid $color-default-black;
+  font-family: $ff-secondary;
+  font-weight: 600;
+  color: $color-default-white;
+  transition: all $trans-default;
+
+  @include hover {
+    background-color: $color-default-white;
+    color: $color-default-black;
+  }
+
+  &:focus {
+    outline: 1px solid $color-gray;
+  }
+}

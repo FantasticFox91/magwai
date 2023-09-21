@@ -1,0 +1,13 @@
+.burger {
+  position: relative;
+  display: flex;
+  padding: 0;
+  width: 37px;
+  height: 31px;
+  border: none;
+  background-color: $color-transparent;
+
+  @include vp-1280 {
+    display: none;
+  }
+}
