@@ -1031,6 +1031,10 @@ html {
   pointer-events: auto;
 }
 
+.modal__close-btn .modal__icon {
+  transition: transform 0.3s ease;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 50px;
@@ -1217,6 +1221,10 @@ html {
   }
 
   .form__close:hover:not(.focus-visible) .form__icon {
+    transform: scale(1.2);
+  }
+
+  .modal__close-btn:hover:not(.focus-visible) .modal__icon {
     transform: scale(1.2);
   }
 }
